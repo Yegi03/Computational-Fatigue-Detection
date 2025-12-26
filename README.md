@@ -260,28 +260,10 @@ Before submission, verify:
 
 ---
 
-## 📚 **CITATION**
-
-If you use this code, please cite:
-
-```bibtex
-@article{your_paper_2024,
-  title={Calibrated Multimodal Fatigue Detection from Physiological Signals: A Three-Question Analysis with Temporal Baseline Validation},
-  author={Abdollahinejad, Yeganeh and Reza, Sayed Mohsin},
-  journal={Your Journal},
-  year={2024}
-}
-```
-
----
 
 ## 📧 **CONTACT**
 
-For questions or issues:
-- **Authors**: Yeganeh Abdollahinejad, Sayed Mohsin Reza
-- **Institution**: Pennsylvania State University
-
----
+For questions, issues, or collaboration inquiries, please contact us at yza5171@psu.edu or skr6024@psu.edu.
 
 ## 📄 **LICENSE**
 
