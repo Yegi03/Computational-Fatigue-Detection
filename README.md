@@ -267,10 +267,6 @@ For questions, issues, or collaboration inquiries, please contact us at yza5171@
 
 ## 📄 **LICENSE**
 
-See LICENSE file in parent directory.
+SPDX-License-Identifier: MIT
 
----
-
-**Last Updated**: 2024  
-**Status**: ✅ **COMPLETE** - Ready for paper submission
 
