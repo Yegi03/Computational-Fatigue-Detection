@@ -1,4 +1,4 @@
-# 📋 FINAL VERSION - Complete Package for Paper
+# 📋 FINAL VERSION - Complete Package for Full Experiment
 
 This folder contains everything needed to reproduce the paper: **"Calibrated Multimodal Fatigue Detection from Physiological Signals"**
 
