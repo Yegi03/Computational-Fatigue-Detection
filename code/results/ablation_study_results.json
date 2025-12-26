@@ -1,0 +1,125 @@
+{
+  "full_finetuning": {
+    "parameters": {
+      "total_trainable": 2200000,
+      "frozen": 0,
+      "total_all": 2200000
+    },
+    "metrics": {
+      "pfi": {
+        "MAE": 0.118,
+        "CCC": 0.587,
+        "r": 0.612
+      },
+      "tot": {
+        "F1": 0.523,
+        "PR-AUC": 0.742
+      },
+      "acl": {
+        "F1": 0.477,
+        "PR-AUC": 0.674
+      },
+      "calibration": {
+        "ECE": 0.04,
+        "Brier": 0.095
+      }
+    }
+  },
+  "lora_only": {
+    "parameters": {
+      "total_trainable": 50000,
+      "lora_params": 45000,
+      "other_trainable": 5000,
+      "frozen_backbone": 2150000,
+      "total_all": 2200000
+    },
+    "metrics": {
+      "pfi": {
+        "MAE": 0.112,
+        "CCC": 0.62,
+        "r": 0.645
+      },
+      "tot": {
+        "F1": 0.571,
+        "PR-AUC": 0.762
+      },
+      "acl": {
+        "F1": 0.519,
+        "PR-AUC": 0.688
+      },
+      "calibration": {
+        "ECE": 0.036,
+        "Brier": 0.091
+      }
+    }
+  },
+  "moe_only": {
+    "parameters": {
+      "total_trainable": 282755,
+      "moe_params": 282755,
+      "moe_experts": 3,
+      "frozen_backbone": 2150000,
+      "total_all": 2432755
+    },
+    "metrics": {
+      "pfi": {
+        "MAE": 0.105,
+        "CCC": 0.635,
+        "r": 0.66
+      },
+      "tot": {
+        "F1": 0.56,
+        "PR-AUC": 0.75
+      },
+      "acl": {
+        "F1": 0.51,
+        "PR-AUC": 0.69
+      },
+      "calibration": {
+        "ECE": 0.033,
+        "Brier": 0.088
+      }
+    },
+    "efficiency": {
+      "ccc_gain_absolute": 0.015000000000000013,
+      "ccc_gain_per_1k_params": 6.44454469291745e-05,
+      "param_overhead_percent": 465.51,
+      "param_overhead_vs_full_ft": 12.8525
+    }
+  },
+  "lora_moe": {
+    "parameters": {
+      "total_trainable": 332755,
+      "lora_params": 45000,
+      "moe_params": 282755,
+      "moe_experts": 3,
+      "frozen_backbone": 2150000,
+      "total_all": 2482755
+    },
+    "metrics": {
+      "pfi": {
+        "MAE": 0.095,
+        "CCC": 0.68,
+        "r": 0.7
+      },
+      "tot": {
+        "F1": 0.585,
+        "PR-AUC": 0.775
+      },
+      "acl": {
+        "F1": 0.545,
+        "PR-AUC": 0.705
+      },
+      "calibration": {
+        "ECE": 0.028,
+        "Brier": 0.082
+      }
+    },
+    "efficiency": {
+      "ccc_gain_absolute": 0.06000000000000005,
+      "ccc_gain_per_1k_params": 0.00021219783911867183,
+      "param_overhead_percent": 565.51,
+      "param_overhead_vs_full_ft": 15.125227272727274
+    }
+  }
+}

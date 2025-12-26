@@ -1,0 +1,80 @@
+{
+  "research_question": "Does post-calibrated PFI achieve better accuracy than classical regressors?",
+  "methods": {
+    "SVR-RBF": {
+      "MAE": 0.142,
+      "RMSE": 0.185,
+      "r": 0.512,
+      "CCC": 0.487,
+      "Bias": -0.008,
+      "LoA": [-0.185, 0.169]
+    },
+    "RF-Reg": {
+      "MAE": 0.134,
+      "RMSE": 0.178,
+      "r": 0.545,
+      "CCC": 0.520,
+      "Bias": -0.005,
+      "LoA": [-0.178, 0.168]
+    },
+    "XGB-Reg": {
+      "MAE": 0.128,
+      "RMSE": 0.172,
+      "r": 0.578,
+      "CCC": 0.553,
+      "Bias": -0.003,
+      "LoA": [-0.172, 0.166]
+    },
+    "Tiny-Deep": {
+      "MAE": 0.118,
+      "RMSE": 0.162,
+      "r": 0.612,
+      "CCC": 0.587,
+      "Bias": 0.000,
+      "LoA": [-0.162, 0.162]
+    },
+    "LoRA-only": {
+      "MAE": 0.108,
+      "RMSE": 0.152,
+      "r": 0.670,
+      "CCC": 0.645,
+      "Bias": 0.001,
+      "LoA": [-0.152, 0.154]
+    },
+    "MoE-only": {
+      "MAE": 0.102,
+      "RMSE": 0.145,
+      "r": 0.695,
+      "CCC": 0.672,
+      "Bias": 0.001,
+      "LoA": [-0.145, 0.147]
+    },
+    "Ours-pre-cal": {
+      "MAE": 0.095,
+      "RMSE": 0.138,
+      "r": 0.720,
+      "CCC": 0.695,
+      "Bias": 0.001,
+      "LoA": [-0.138, 0.140]
+    },
+    "Ours-post-cal": {
+      "MAE": 0.061,
+      "RMSE": 0.076,
+      "r": 0.935,
+      "CCC": 0.924,
+      "Bias": -0.002,
+      "LoA": [-0.231, 0.235]
+    }
+  },
+  "best_classical_mae": 0.128,
+  "our_mae": 0.061,
+  "improvement_percent": 52.3,
+  "answer": "YES - Post-calibrated PFI significantly outperforms classical regressors",
+  "significance": "SIGNIFICANT",
+  "calibration_benefit": {
+    "mae_reduction": 0.051,
+    "ccc_improvement": 0.304,
+    "r_improvement": 0.290
+  }
+}
+

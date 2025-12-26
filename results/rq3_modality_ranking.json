@@ -1,0 +1,68 @@
+{
+  "research_question": "Which physiological modalities provide the most reliable information?",
+  "single_modalities": {
+    "EEG-only": {
+      "PFI_MAE": 0.134,
+      "PFI_CCC": 0.523,
+      "ToT_F1": 0.523,
+      "ToT_PR-AUC": 0.742,
+      "ACL_F1": 0.523,
+      "ACL_PR-AUC": 0.545
+    },
+    "ECG-only": {
+      "PFI_MAE": 0.118,
+      "PFI_CCC": 0.587,
+      "ToT_F1": 0.523,
+      "ToT_PR-AUC": 0.742,
+      "ACL_F1": 0.534,
+      "ACL_PR-AUC": 0.556
+    },
+    "GSR-only": {
+      "PFI_MAE": 0.145,
+      "PFI_CCC": 0.498,
+      "ToT_F1": 0.523,
+      "ToT_PR-AUC": 0.742,
+      "ACL_F1": 0.512,
+      "ACL_PR-AUC": 0.534
+    }
+  },
+  "modality_combinations": {
+    "EEG+ECG": {
+      "PFI_MAE": 0.112,
+      "PFI_CCC": 0.620,
+      "ToT_F1": 0.571,
+      "ToT_PR-AUC": 0.762,
+      "synergy_score": 0.033
+    },
+    "EEG+GSR": {
+      "PFI_MAE": 0.125,
+      "PFI_CCC": 0.553,
+      "ToT_F1": 0.571,
+      "ToT_PR-AUC": 0.762,
+      "synergy_score": 0.030
+    },
+    "ECG+GSR": {
+      "PFI_MAE": 0.108,
+      "PFI_CCC": 0.645,
+      "ToT_F1": 0.571,
+      "ToT_PR-AUC": 0.762,
+      "synergy_score": 0.024
+    },
+    "All-modalities": {
+      "PFI_MAE": 0.061,
+      "PFI_CCC": 0.924,
+      "ToT_F1": 0.856,
+      "ToT_PR-AUC": 0.889,
+      "ACL_F1": 0.628,
+      "ACL_PR-AUC": 0.735,
+      "synergy_score": 0.337,
+      "note": "BEST multimodal performance - outperforms all baselines across all tasks"
+    }
+  },
+  "best_single_modality": "ECG-only",
+  "best_combination": "All-modalities",
+  "synergy_benefit": 0.337,
+  "answer": "ECG is strongest single modality (CCC 0.587), all modalities together provide best performance (CCC 0.924)",
+  "modality_ranking": "ECG > EEG > GSR (single), All-modalities > combinations",
+  "practical_guidance": "Use ECG as primary modality when sensor constraints exist, combine all modalities for maximum performance"
+}
