@@ -1,10 +1,24 @@
-# 📋 FINAL VERSION - Complete Package for Full Experiment
+# Computational Fatigue Detection from Physiological Signals with Calibrated Multimodal Fusion
 
 This folder contains everything needed to reproduce the paper: **"Calibrated Multimodal Fatigue Detection from Physiological Signals"**
 
 ---
+## 📖 Overview
 
-## 📁 **FOLDER STRUCTURE**
+Fatigue is a critical safety concern in domains such as transportation, aviation, healthcare, and manufacturing, where impaired attention and decision-making can lead to accidents and errors. Reliable fatigue monitoring systems must address three key challenges: (1) accurately estimating fatigue levels across diverse individuals, (2) distinguishing genuine physiological fatigue signals from temporal confounds (e.g., time-on-task effects), and (3) providing well-calibrated probability estimates suitable for decision support.
+
+This repository contains the complete implementation of a **calibrated multimodal framework** for physiological fatigue detection. The framework fuses three complementary physiological modalities—electroencephalography (EEG), heart rate variability (HRV) derived from electrocardiography (ECG), and electrodermal activity (EDA)—to estimate fatigue states. It combines **Low-Rank Adaptation (LoRA)** with **Mixture-of-Experts (MoE)** routing for parameter-efficient multimodal fusion, achieving strong performance while training only 15.1% of the parameters required for full fine-tuning.
+
+**Key Features:**
+- **Physiological Fatigue Index (PFI):** A bounded continuous target for real-time fatigue monitoring
+- **Temporal Ceiling Analysis:** Explicit auditing of temporal confounding via Time-on-Task (ToT) and Affective-Cognitive Load (ACL) targets
+- **Parameter-Efficient Adaptation:** LoRA + MoE reduces trainable parameters by 85% while improving accuracy
+- **Calibrated Probabilities:** Post-hoc isotonic calibration for reliable decision support
+- **Rigorous Evaluation:** Nested leave-one-subject-out (LOSO) protocol with 58 folds
+
+---
+
+## 📁 **Repository STRUCTURE**
 
 ```
 Final_version/
@@ -259,14 +273,41 @@ Before submission, verify:
   - MoE: K=3 experts, hidden_dim=128, num_layers=2, gate_type='soft', temperature=1.0
 
 ---
+## 📚 **CITATION**
 
+If you use this code in your research, please cite our paper:
+
+```bibtex
+@inproceedings{abdollahinejad2025fatigue,
+  title={Computational Fatigue Detection from Physiological Signals with Calibrated Multimodal Fusion},
+  author={Abdollahinejad, Yeganeh and Reza, Sayed Mohsin},
+  booktitle={Proceedings of the International Conference on Computational Science and Computational Intelligence (CSCI)},
+  year={2025},
+  note={To appear}
+}
+```
+
+**Paper Link:** [To be added upon publication]
+
+---
 
 ## 📧 **CONTACT**
 
-For questions, issues, or collaboration inquiries, please contact us at yza5171@psu.edu or skr6024@psu.edu.
+For questions or collaboration inquiries:
+- **Yeganeh Abdollahinejad:** yza5171@psu.edu
+- **Sayed Mohsin Reza:** skr6024@psu.edu
+
+---
+
+## 🙏 **ACKNOWLEDGMENTS**
+
+This work uses the [ASCERTAIN dataset](https://ascertain-dataset.github.io/). We thank the original authors for making this resource publicly available.
+
+---
 
 ## 📄 **LICENSE**
 
-SPDX-License-Identifier: MIT
+This project is licensed under the MIT License.
 
+SPDX-License-Identifier: MIT
 
